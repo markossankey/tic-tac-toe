@@ -25,7 +25,7 @@ const clicked = (id) => {
             if (board[a] && board[a] == board[b] && board[a] == board[c]) {
                 console.log('winner is ' + currentPlayer.innerText)
                 displayWinner(currentPlayer);
-            }
+            } else if (!board.includes(null)) displayTie()
         }
         currentPlayer.innerHTML = "O"
     }
@@ -40,7 +40,7 @@ const clicked = (id) => {
             if (board[a] && board[a] == board[b] && board[a] == board[c]) {
                 console.log('winner is ' + currentPlayer.innerText)
                 displayWinner(currentPlayer);
-            }
+            } else if (!board.includes(null)) displayTie()
         }
         currentPlayer.innerHTML = "X"
     }
@@ -52,6 +52,11 @@ function displayWinner(currentPlayer) {
     document.getElementById('winner').innerText = currentPlayer.innerText
     document.getElementById('winning-screen').style.visibility = "visible"
     
+}
+
+function displayTie() {
+    document.getElementById('winning-text').innerText = "Its a tie!";
+    document.getElementById('winning-screen').style.visibility = "visible"
 }
 
     
