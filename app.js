@@ -46,8 +46,12 @@ const clicked = (id) => {
     }
 
 function displayWinner(currentPlayer) {
+    for (i = 0; i < 9; i ++) {
+        document.getElementById("" + i).setAttribute('disabled', false)
+    }
     document.getElementById('winner').innerText = currentPlayer.innerText
     document.getElementById('winning-screen').style.visibility = "visible"
+    
 }
 
     
