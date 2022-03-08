@@ -59,8 +59,4 @@ function displayTie() {
     document.getElementById('winning-screen').style.visibility = "visible"
 }
 
-    
-    
-
-    //console.log(board)
 }
